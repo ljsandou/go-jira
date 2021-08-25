@@ -119,6 +119,7 @@ type IssueFields struct {
 	Updated                       Time              `json:"updated,omitempty" structs:"updated,omitempty"`
 	Description                   string            `json:"description,omitempty" structs:"description,omitempty"`
 	Summary                       string            `json:"summary,omitempty" structs:"summary,omitempty"`
+	Customfield_10300             string            `json:"customfield_10300,omitempty" structs:"customfield_10300,omitempty"`
 	Creator                       *User             `json:"Creator,omitempty" structs:"Creator,omitempty"`
 	Reporter                      *User             `json:"reporter,omitempty" structs:"reporter,omitempty"`
 	Components                    []*Component      `json:"components,omitempty" structs:"components,omitempty"`
