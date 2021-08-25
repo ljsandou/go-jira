@@ -123,6 +123,7 @@ type IssueFields struct {
 	Creator                       *User             `json:"Creator,omitempty" structs:"Creator,omitempty"`
 	Reporter                      *User             `json:"reporter,omitempty" structs:"reporter,omitempty"`
 	Components                    []*Component      `json:"components,omitempty" structs:"components,omitempty"`
+        Customfield_10500             []*Custom10500    `json:"customfield_10500,omitempty" structs:"customfield_10500,omitempty"`
 	Status                        *Status           `json:"status,omitempty" structs:"status,omitempty"`
 	Progress                      *Progress         `json:"progress,omitempty" structs:"progress,omitempty"`
 	AggregateProgress             *Progress         `json:"aggregateprogress,omitempty" structs:"aggregateprogress,omitempty"`
@@ -209,6 +210,12 @@ func (i *IssueFields) UnmarshalJSON(data []byte) error {
 	i.Unknowns = totalMap
 	return nil
 
+}
+//custom item
+type Custom10500 struct {
+    Id            string     `json:"id,omitempty" structs:"id,omitempty"`
+    Self          string     `json:"self,omitempty" structs:"self,omitempty"`
+    Value         string     `json:"value,omitempty" structs:"value,omitempty"`
 }
 
 // IssueRenderedFields represents rendered fields of a Jira issue.
