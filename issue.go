@@ -124,7 +124,7 @@ type IssueFields struct {
 	Reporter                      *User             `json:"reporter,omitempty" structs:"reporter,omitempty"`
 	Components                    []*Component      `json:"components,omitempty" structs:"components,omitempty"`
     Customfield_10211             []*Custom10211    `json:"customfield_10211,omitempty" structs:"customfield_10211,omitempty"`
-    Customfield_10209             []*Custom10209    `json:"customfield_10209,omitempty" structs:"customfield_10209,omitempty"`
+    Customfield_10209             *Custom10209    `json:"customfield_10209,omitempty" structs:"customfield_10209,omitempty"`
 	Status                        *Status           `json:"status,omitempty" structs:"status,omitempty"`
 	Progress                      *Progress         `json:"progress,omitempty" structs:"progress,omitempty"`
 	AggregateProgress             *Progress         `json:"aggregateprogress,omitempty" structs:"aggregateprogress,omitempty"`
