@@ -119,11 +119,12 @@ type IssueFields struct {
 	Updated                       Time              `json:"updated,omitempty" structs:"updated,omitempty"`
 	Description                   string            `json:"description,omitempty" structs:"description,omitempty"`
 	Summary                       string            `json:"summary,omitempty" structs:"summary,omitempty"`
-	Customfield_10300             string            `json:"customfield_10300,omitempty" structs:"customfield_10300,omitempty"`
+	Customfield_10208             string            `json:"customfield_10208,omitempty" structs:"customfield_10208,omitempty"`
 	Creator                       *User             `json:"Creator,omitempty" structs:"Creator,omitempty"`
 	Reporter                      *User             `json:"reporter,omitempty" structs:"reporter,omitempty"`
 	Components                    []*Component      `json:"components,omitempty" structs:"components,omitempty"`
-        Customfield_10500             []*Custom10500    `json:"customfield_10500,omitempty" structs:"customfield_10500,omitempty"`
+    customfield_10211             []*Custom10211    `json:"customfield_10211,omitempty" structs:"customfield_10211,omitempty"`
+    customfield_10209             []*Custom10209    `json:"customfield_10209,omitempty" structs:"customfield_10209,omitempty"`
 	Status                        *Status           `json:"status,omitempty" structs:"status,omitempty"`
 	Progress                      *Progress         `json:"progress,omitempty" structs:"progress,omitempty"`
 	AggregateProgress             *Progress         `json:"aggregateprogress,omitempty" structs:"aggregateprogress,omitempty"`
@@ -212,7 +213,14 @@ func (i *IssueFields) UnmarshalJSON(data []byte) error {
 
 }
 //custom item
-type Custom10500 struct {
+type Custom10211 struct {
+    Id            string     `json:"id,omitempty" structs:"id,omitempty"`
+    Self          string     `json:"self,omitempty" structs:"self,omitempty"`
+    Value         string     `json:"value,omitempty" structs:"value,omitempty"`
+}
+
+//custom item
+type Custom10209 struct {
     Id            string     `json:"id,omitempty" structs:"id,omitempty"`
     Self          string     `json:"self,omitempty" structs:"self,omitempty"`
     Value         string     `json:"value,omitempty" structs:"value,omitempty"`
