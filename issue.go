@@ -217,6 +217,8 @@ type Custom10211 struct {
     Id            string     `json:"id,omitempty" structs:"id,omitempty"`
     Self          string     `json:"self,omitempty" structs:"self,omitempty"`
     Value         string     `json:"value,omitempty" structs:"value,omitempty"`
+    Disabled      bool       `json:"disabled,omitempty" structs:"disabled,omitempty"`
+
 }
 
 //custom item
@@ -224,6 +226,7 @@ type Custom10209 struct {
     Id            string     `json:"id,omitempty" structs:"id,omitempty"`
     Self          string     `json:"self,omitempty" structs:"self,omitempty"`
     Value         string     `json:"value,omitempty" structs:"value,omitempty"`
+    Disabled      bool       `json:"disabled,omitempty" structs:"disabled,omitempty"`
 }
 
 // IssueRenderedFields represents rendered fields of a Jira issue.
